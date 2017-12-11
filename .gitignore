@@ -3,4 +3,6 @@
 *.ide*
 *.dll
 *.pdb
-
+*.nuget.cache
+*.nuget.g.props
+*.assets.json
