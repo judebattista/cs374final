@@ -18,7 +18,7 @@ namespace RazorPagesJazz.Pages.Tracks
             _context = context;
         }
 
-        public Tracks Tracks { get; set; }
+        public Models.Tracks Tracks { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

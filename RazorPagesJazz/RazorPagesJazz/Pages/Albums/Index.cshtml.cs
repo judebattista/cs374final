@@ -12,17 +12,16 @@ namespace RazorPagesJazz.Pages.Albums
 {
     public class IndexModel : PageModel
     {
-        private readonly RazorPagesJazz.Models.jazzRecordingDatabaseContext _context;
+        private readonly jazzRecordingDatabaseContext _context;
 
-        public IndexModel(RazorPagesJazz.Models.jazzRecordingDatabaseContext context)
+        public IndexModel(jazzRecordingDatabaseContext context)
         {
             _context = context;
         }
 
         public IList<Models.Albums> Albums { get; set; }
-		public IList<Models.Artists> Artists { get; set; }
-		public SelectList Durations;
-		public string AlbumDuration { get; set; }
+		//public SelectList Durations;
+		//public string AlbumDuration { get; set; }
 
         public async Task OnGetAsync(string albumTitle, string dateReleased, string artistFName, string artistLname, string trackName)
         {
@@ -100,7 +99,7 @@ namespace RazorPagesJazz.Pages.Albums
 					(from a in albums
 					 join c in _context.AlbumContainsTracks on a.Id equals c.AlbumId
 					 join t in _context.Tracks on c.TrackId equals t.Id
-					 where t.Name == trackName
+					 where t.Name.Contains(trackName)
 					 select new Models.Albums
 					 {
 						 Title = a.Title,

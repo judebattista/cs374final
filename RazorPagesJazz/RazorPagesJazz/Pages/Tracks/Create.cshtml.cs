@@ -24,7 +24,7 @@ namespace RazorPagesJazz.Pages.Tracks
         }
 
         [BindProperty]
-        public Tracks Tracks { get; set; }
+        public Models.Tracks Tracks { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
