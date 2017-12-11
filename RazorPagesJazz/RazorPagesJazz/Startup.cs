@@ -27,6 +27,9 @@ namespace RazorPagesJazz
 
 			var connection = "Server=tcp:coltrane.database.windows.net,1433;Initial Catalog=jazzRecordingDatabase;User ID=ServerAdmin;Password=AccessDemoCrashed1992";
 			services.AddDbContext<jazzRecordingDatabaseContext>(options => options.UseSqlServer(connection));
+
+            services.AddDbContext<jazzDatabaseContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("jazzDatabaseContext")));
 		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

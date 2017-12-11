@@ -20,3 +20,14 @@ F:\Source\Sandbox\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPag
 F:\Source\Sandbox\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.AssemblyInfo.cs
 F:\Source\Sandbox\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.dll
 F:\Source\Sandbox\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.pdb
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\bin\Debug\netcoreapp2.0\RazorPagesJazz.deps.json
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\bin\Debug\netcoreapp2.0\RazorPagesJazz.runtimeconfig.json
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\bin\Debug\netcoreapp2.0\RazorPagesJazz.runtimeconfig.dev.json
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\bin\Debug\netcoreapp2.0\RazorPagesJazz.dll
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\bin\Debug\netcoreapp2.0\RazorPagesJazz.pdb
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.csprojResolveAssemblyReference.cache
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.csproj.CoreCompileInputs.cache
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.AssemblyInfoInputs.cache
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.AssemblyInfo.cs
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.dll
+F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.pdb

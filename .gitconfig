@@ -1,0 +1,12 @@
+[user]
+	name = Jude Battista
+	email = jbattista20@my.whitworth.edu
+[color]
+	ui = true
+[gui]
+	recentrepo = F:/Source/cs278/Final
+	recentrepo = F:/Source/cs374/final
+	
+git config --global guitool."Add to .gitignore".cmd $'echo "\n$FILENAME" >> .gitignore & git add .gitignore'
+git config --global guitool."Add to .gitignore".needsfile yes
+git config --global guitool."Add to .gitignore".confirm yes
