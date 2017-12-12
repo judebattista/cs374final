@@ -1,0 +1,60 @@
+@page
+@model RazorPagesJazz.Pages.Artists.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form>
+	<p>
+		Artist First Name: <input type="text" name="artistfname" />
+	</p>
+	<p>
+		Artist Last Name: <input type="text" name="artistlname" />
+	</p>
+	<p>
+		Track Name: <input type="text" name="trackname" />
+	</p>
+	<p>
+		Album Title: <input type="text" name="albumtitle" />
+	</p>
+	<p>
+		<input type="submit" value="Run Query" />
+	</p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Artists[0].Fname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Artists[0].Lname)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Artists) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lname)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

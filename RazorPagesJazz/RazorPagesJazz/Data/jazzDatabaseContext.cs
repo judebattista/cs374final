@@ -13,4 +13,6 @@ using RazorPagesJazz.Models;
         }
 
         public DbSet<RazorPagesJazz.Models.Tracks> Tracks { get; set; }
+
+        public DbSet<RazorPagesJazz.Models.Artists> Artists { get; set; }
     }
