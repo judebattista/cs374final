@@ -1,5 +1,5 @@
 @page
-@model RazorPagesJazz.Pages.Albums.IndexModel
+@model RazorPagesJazz.Pages.Artists.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -10,22 +10,7 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-
-
 <form>
-	@*Drop down query data
-		<p>
-			<select asp-for="AlbumDuration" asp-items="Model.Durations">
-				<option value="">All</option>
-			</select>
-		</p>
-	*@
-	<p>
-		Title: <input type="text" name="albumtitle" />
-	</p>
-	<p>
-		Release Date: <input type="text" name="datereleased" />
-	</p>
 	<p>
 		Artist First Name: <input type="text" name="artistfname" />
 	</p>
@@ -36,41 +21,37 @@
 		Track Name: <input type="text" name="trackname" />
 	</p>
 	<p>
+		Album Title: <input type="text" name="albumtitle" />
+	</p>
+	<p>
 		<input type="submit" value="Run Query" />
 	</p>
 </form>
-
 
 <table class="table">
     <thead>
         <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Albums[0].Title)
+                    @Html.DisplayNameFor(model => model.Artists[0].Fname)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Albums[0].DateReleased)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Albums[0].Duration)
+                    @Html.DisplayNameFor(model => model.Artists[0].Lname)
                 </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Albums) {
+@foreach (var item in Model.Artists) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.DisplayFor(modelItem => item.Fname)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DateReleased)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
+                @Html.DisplayFor(modelItem => item.Lname)
             </td>
 			<td>
+				<a asp-page="./Albums" asp-route-id="@item.Id">Albums</a> |
 				<a asp-page="./Tracks" asp-route-id="@item.Id">Tracks</a> |
-				<a asp-page="./Artists" asp-route-id="@item.Id">Artists</a> |
 				<a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
 				<a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
 				<a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>

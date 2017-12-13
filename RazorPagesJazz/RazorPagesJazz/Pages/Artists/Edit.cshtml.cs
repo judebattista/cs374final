@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesJazz.Models;
 
-namespace RazorPagesJazz.Pages.Tracks
+namespace RazorPagesJazz.Pages.Artists
 {
     public class EditModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace RazorPagesJazz.Pages.Tracks
         }
 
         [BindProperty]
-        public Models.Tracks Tracks { get; set; }
+        public Models.Artists Artists { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,9 +29,9 @@ namespace RazorPagesJazz.Pages.Tracks
                 return NotFound();
             }
 
-            Tracks = await _context.Tracks.SingleOrDefaultAsync(m => m.Id == id);
+            Artists = await _context.Artists.SingleOrDefaultAsync(m => m.Id == id);
 
-            if (Tracks == null)
+            if (Artists == null)
             {
                 return NotFound();
             }
@@ -45,7 +45,7 @@ namespace RazorPagesJazz.Pages.Tracks
                 return Page();
             }
 
-            _context.Attach(Tracks).State = EntityState.Modified;
+            _context.Attach(Artists).State = EntityState.Modified;
 
             try
             {
@@ -53,7 +53,7 @@ namespace RazorPagesJazz.Pages.Tracks
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TracksExists(Tracks.Id))
+                if (!ArtistsExists(Artists.Id))
                 {
                     return NotFound();
                 }
@@ -66,9 +66,9 @@ namespace RazorPagesJazz.Pages.Tracks
             return RedirectToPage("./Index");
         }
 
-        private bool TracksExists(int id)
+        private bool ArtistsExists(int id)
         {
-            return _context.Tracks.Any(e => e.Id == id);
+            return _context.Artists.Any(e => e.Id == id);
         }
     }
 }

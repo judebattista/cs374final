@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RazorPagesJazz.Models;
 
-namespace RazorPagesJazz.Pages.Tracks
+namespace RazorPagesJazz.Pages.Artists
 {
     public class CreateModel : PageModel
     {
@@ -24,7 +24,7 @@ namespace RazorPagesJazz.Pages.Tracks
         }
 
         [BindProperty]
-        public Models.Tracks Tracks { get; set; }
+        public Models.Artists Artists { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -33,7 +33,7 @@ namespace RazorPagesJazz.Pages.Tracks
                 return Page();
             }
 
-            _context.Tracks.Add(Tracks);
+            _context.Artists.Add(Artists);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

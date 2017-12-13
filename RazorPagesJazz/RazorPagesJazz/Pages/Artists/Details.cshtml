@@ -1,0 +1,31 @@
+@page
+@model RazorPagesJazz.Pages.Artists.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Artists</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Artists.Fname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Artists.Fname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Artists.Lname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Artists.Lname)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Artists.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

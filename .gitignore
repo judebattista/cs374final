@@ -6,3 +6,4 @@
 *.nuget.cache
 *.nuget.g.props
 *.assets.json
+*.user

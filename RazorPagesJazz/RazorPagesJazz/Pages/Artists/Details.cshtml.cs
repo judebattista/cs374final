@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace RazorPagesJazz.Pages.Tracks
+namespace RazorPagesJazz.Pages.Artists
 {
     public class DetailsModel : PageModel
     {
@@ -17,7 +17,7 @@ namespace RazorPagesJazz.Pages.Tracks
             _context = context;
         }
 
-        public Models.Tracks Tracks { get; set; }
+        public Models.Artists Artists { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -26,9 +26,9 @@ namespace RazorPagesJazz.Pages.Tracks
                 return NotFound();
             }
 
-            Tracks = await _context.Tracks.SingleOrDefaultAsync(m => m.Id == id);
+            Artists = await _context.Artists.SingleOrDefaultAsync(m => m.Id == id);
 
-            if (Tracks == null)
+            if (Artists == null)
             {
                 return NotFound();
             }

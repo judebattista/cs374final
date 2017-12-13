@@ -1,0 +1,86 @@
+﻿@page
+@model RazorPagesJazz.Pages.Tracks.AlbumsModel
+@{
+	ViewData["Title"] = "Albums";
+}
+
+<h2>Albums containing @Html.DisplayFor(model => model.Tracks.Name)</h2>
+
+<div>
+	<h4>Albums</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.Tracks.Id)
+		</dt>
+		<dd>
+			@Html.DisplayFor(model => model.Tracks.Id)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Tracks.Name)
+		</dt>
+		<dd>
+			@Html.DisplayFor(model => model.Tracks.Name)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Tracks.Duration)
+		</dt>
+		<dd>
+			@Html.DisplayFor(model => model.Tracks.Duration)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Tracks.DateRecorded)
+		</dt>
+		<dd>
+			@Html.DisplayFor(model => model.Tracks.DateRecorded)
+		</dd>
+	</dl>
+</div>
+<div>
+	<a asp-page="./Index">Back to List</a>
+</div>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Albums[0].Id)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Albums[0].Title)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Albums[0].Duration)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Albums[0].DateReleased)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.Albums)
+		{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Id)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Title)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Duration)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.DateReleased)
+			</td>
+			<td>
+				<a asp-page="../Albums/Edit" asp-route-id="@item.Id">Edit</a> |
+				<a asp-page="../Albums/Details" asp-route-id="@item.Id">Details</a> |
+				<a asp-page="..Albums/Delete" asp-route-id="@item.Id">Delete</a>
+			</td>
+		</tr>
+		}
+	</tbody>
+</table>
+

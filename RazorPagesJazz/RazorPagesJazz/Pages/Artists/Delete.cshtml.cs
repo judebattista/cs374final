@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesJazz.Models;
 
-namespace RazorPagesJazz.Pages.Tracks
+namespace RazorPagesJazz.Pages.Artists
 {
     public class DeleteModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace RazorPagesJazz.Pages.Tracks
         }
 
         [BindProperty]
-        public Models.Tracks Tracks { get; set; }
+        public Models.Artists Artists { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,9 +28,9 @@ namespace RazorPagesJazz.Pages.Tracks
                 return NotFound();
             }
 
-            Tracks = await _context.Tracks.SingleOrDefaultAsync(m => m.Id == id);
+            Artists = await _context.Artists.SingleOrDefaultAsync(m => m.Id == id);
 
-            if (Tracks == null)
+            if (Artists == null)
             {
                 return NotFound();
             }
@@ -44,11 +44,11 @@ namespace RazorPagesJazz.Pages.Tracks
                 return NotFound();
             }
 
-            Tracks = await _context.Tracks.FindAsync(id);
+            Artists = await _context.Artists.FindAsync(id);
 
-            if (Tracks != null)
+            if (Artists != null)
             {
-                _context.Tracks.Remove(Tracks);
+                _context.Artists.Remove(Artists);
                 await _context.SaveChangesAsync();
             }
 
