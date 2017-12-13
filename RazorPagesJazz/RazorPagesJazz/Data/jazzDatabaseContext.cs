@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesJazz.Models;
 
-    public class jazzDatabaseContext : DbContext
+    public class jazzRecordingDatabaseContext : DbContext
     {
-        public jazzDatabaseContext (DbContextOptions<jazzDatabaseContext> options)
+        public jazzRecordingDatabaseContext (DbContextOptions<jazzRecordingDatabaseContext> options)
             : base(options)
         {
         }

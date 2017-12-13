@@ -12,9 +12,9 @@ namespace RazorPagesJazz.Pages.Tracks
 {
     public class EditModel : PageModel
     {
-        private readonly jazzDatabaseContext _context;
+        private readonly Models.jazzRecordingDatabaseContext _context;
 
-        public EditModel(jazzDatabaseContext context)
+        public EditModel(Models.jazzRecordingDatabaseContext context)
         {
             _context = context;
         }

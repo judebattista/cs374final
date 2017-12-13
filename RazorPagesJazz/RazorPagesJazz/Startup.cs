@@ -26,9 +26,9 @@ namespace RazorPagesJazz
             services.AddMvc();
 
 			var connection = "Server=tcp:coltrane.database.windows.net,1433;Initial Catalog=jazzRecordingDatabase;User ID=ServerAdmin;Password=AccessDemoCrashed1992";
-			services.AddDbContext<jazzRecordingDatabaseContext>(options => options.UseSqlServer(connection));
+			services.AddDbContext<Models.jazzRecordingDatabaseContext>(options => options.UseSqlServer(connection));
 
-            services.AddDbContext<jazzDatabaseContext>(options =>
+            services.AddDbContext<Models.jazzRecordingDatabaseContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("jazzDatabaseContext")));
 		}
 

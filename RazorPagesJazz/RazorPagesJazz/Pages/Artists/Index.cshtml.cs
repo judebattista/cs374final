@@ -11,9 +11,9 @@ namespace RazorPagesJazz.Pages.Artists
 {
     public class IndexModel : PageModel
     {
-        private readonly jazzRecordingDatabaseContext _context;
+        private readonly Models.jazzRecordingDatabaseContext _context;
 
-        public IndexModel(jazzRecordingDatabaseContext context)
+        public IndexModel(Models.jazzRecordingDatabaseContext context)
         {
             _context = context;
         }

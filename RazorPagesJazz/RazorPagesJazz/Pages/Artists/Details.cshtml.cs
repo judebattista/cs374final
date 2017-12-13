@@ -5,15 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using RazorPagesJazz.Models;
 
 namespace RazorPagesJazz.Pages.Artists
 {
     public class DetailsModel : PageModel
     {
-        private readonly jazzDatabaseContext _context;
+        private readonly Models.jazzRecordingDatabaseContext _context;
 
-        public DetailsModel(jazzDatabaseContext context)
+        public DetailsModel(Models.jazzRecordingDatabaseContext context)
         {
             _context = context;
         }

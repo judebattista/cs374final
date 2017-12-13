@@ -11,9 +11,9 @@ namespace RazorPagesJazz.Pages.Tracks
 {
     public class CreateModel : PageModel
     {
-        private readonly jazzDatabaseContext _context;
+        private readonly Models.jazzRecordingDatabaseContext _context;
 
-        public CreateModel(jazzDatabaseContext context)
+        public CreateModel(Models.jazzRecordingDatabaseContext context)
         {
             _context = context;
         }

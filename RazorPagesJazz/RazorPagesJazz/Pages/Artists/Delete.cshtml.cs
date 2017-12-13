@@ -11,9 +11,9 @@ namespace RazorPagesJazz.Pages.Artists
 {
     public class DeleteModel : PageModel
     {
-        private readonly jazzDatabaseContext _context;
+        private readonly Models.jazzRecordingDatabaseContext _context;
 
-        public DeleteModel(jazzDatabaseContext context)
+        public DeleteModel(Models.jazzRecordingDatabaseContext context)
         {
             _context = context;
         }
