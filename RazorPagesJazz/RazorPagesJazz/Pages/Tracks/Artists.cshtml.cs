@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesJazz.Models;
 
-namespace RazorPagesJazz.Pages.Albums
+namespace RazorPagesJazz.Pages.Tracks
 {
 	public class ArtistsModel : PageModel
 	{
@@ -19,10 +19,10 @@ namespace RazorPagesJazz.Pages.Albums
 			_context = context;
 		}
 
-		public Models.Albums Albums { get; set; }
+		public Models.Tracks Tracks { get; set; }
 		public IList<Models.Artists> Artists { get; set; }
 
-		//Note: Id here is an ALBUM ID, not an artists ID. We want to get all the artists on that album
+		//Note: Id here is an ARTIST ID, not an track ID. We want to get all the tracks performed by that artist
 		public async Task<IActionResult> OnGetAsync(int? id)
 		{
 			if (id == null)
@@ -31,14 +31,14 @@ namespace RazorPagesJazz.Pages.Albums
 			}
 			var artists = (
 				from r in _context.Artists
-				join f in _context.ArtistFeaturedOnAlbums on r.Id equals f.ArtistId
-				join a in _context.Albums on f.AlbumId equals a.Id
-				where a.Id == id
+				join p in _context.ArtistPerformsTracks on r.Id equals p.ArtistId
+				join t in _context.Tracks on p.TrackId equals t.Id
+				where t.Id == id
 				select new Models.Artists
 				{
 					Id = r.Id,
 					Fname = r.Fname,
-					Lname = r.Lname,
+					Lname = r.Fname,
 				});
 
 			Artists = await artists.ToListAsync();
@@ -48,9 +48,9 @@ namespace RazorPagesJazz.Pages.Albums
 				return NotFound();
 			}
 
-			Albums = await _context.Albums.SingleOrDefaultAsync(m => m.Id == id);
+			Tracks = await _context.Tracks.SingleOrDefaultAsync(m => m.Id == id);
 
-			if (Albums == null)
+			if (Tracks == null)
 			{
 				return NotFound();
 			}
