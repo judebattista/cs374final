@@ -31,3 +31,14 @@ F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\Razo
 F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.AssemblyInfo.cs
 F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.dll
 F:\Source\cs374\final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.pdb
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\bin\Debug\netcoreapp2.0\RazorPagesJazz.deps.json
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\bin\Debug\netcoreapp2.0\RazorPagesJazz.runtimeconfig.json
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\bin\Debug\netcoreapp2.0\RazorPagesJazz.runtimeconfig.dev.json
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\bin\Debug\netcoreapp2.0\RazorPagesJazz.dll
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\bin\Debug\netcoreapp2.0\RazorPagesJazz.pdb
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.csprojResolveAssemblyReference.cache
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.csproj.CoreCompileInputs.cache
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.AssemblyInfoInputs.cache
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.AssemblyInfo.cs
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.dll
+C:\Users\Dean\Source\Repos\cs374final\RazorPagesJazz\RazorPagesJazz\obj\Debug\netcoreapp2.0\RazorPagesJazz.pdb
