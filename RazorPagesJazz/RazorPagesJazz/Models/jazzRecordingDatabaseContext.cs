@@ -46,9 +46,9 @@ namespace RazorPagesJazz.Models
             {
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.DateReleased)
-                    .HasColumnName("dateReleased")
-                    .HasColumnType("date");
+                entity.Property(e => e.YearReleased)
+                    .HasColumnName("yearReleased")
+                    .HasColumnType("int");
 
                 entity.Property(e => e.Duration).HasColumnName("duration");
 
@@ -154,9 +154,9 @@ namespace RazorPagesJazz.Models
             {
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.DateRecorded)
-                    .HasColumnName("dateRecorded")
-                    .HasColumnType("date");
+                entity.Property(e => e.YearRecorded)
+                    .HasColumnName("yearRecorded")
+                    .HasColumnType("int");
 
                 entity.Property(e => e.Duration).HasColumnName("duration");
 

@@ -39,7 +39,7 @@ namespace RazorPagesJazz.Pages.Albums
 					Id = t.Id,
 					Name = t.Name,
 					Duration = t.Duration,
-					DateRecorded = t.DateRecorded
+					YearRecorded = t.YearRecorded
 				});
 
 			Tracks = await tracks.ToListAsync();

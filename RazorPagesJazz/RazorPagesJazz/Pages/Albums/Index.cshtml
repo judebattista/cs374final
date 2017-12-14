@@ -17,7 +17,7 @@
 		Title: <input type="text" name="albumtitle" />
 	</p>
 	<p>
-		Release Date: <input type="text" name="datereleased" />
+		Release Year: <input type="text" name="yearreleased" />
 	</p>
 	<p>
 		Artist First Name: <input type="text" name="artistfname" />
@@ -41,7 +41,7 @@
                     @Html.DisplayNameFor(model => model.Albums[0].Title)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Albums[0].DateReleased)
+                    @Html.DisplayNameFor(model => model.Albums[0].YearReleased)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Albums[0].Duration)
@@ -56,7 +56,7 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DateReleased)
+                @Html.DisplayFor(modelItem => item.YearReleased)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Duration)

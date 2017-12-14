@@ -15,7 +15,7 @@
 		Track Name: <input type="text" name="trackname" />
 	</p>
 	<p>
-		Date Recorded: <input type="text" name="daterecorded" />
+		Year Recorded: <input type="text" name="yearrecorded" />
 	</p>
 	<p>
 		Album Title: <input type="text" name="albumtitle" />
@@ -38,7 +38,7 @@
                     @Html.DisplayNameFor(model => model.Tracks[0].Name)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Tracks[0].DateRecorded)
+                    @Html.DisplayNameFor(model => model.Tracks[0].YearRecorded)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Tracks[0].Duration)
@@ -53,7 +53,7 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DateRecorded)
+                @Html.DisplayFor(modelItem => item.YearRecorded)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Duration)

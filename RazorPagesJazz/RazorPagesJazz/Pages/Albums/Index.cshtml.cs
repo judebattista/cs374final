@@ -23,7 +23,7 @@ namespace RazorPagesJazz.Pages.Albums
 		//public SelectList Durations;
 		//public string AlbumDuration { get; set; }
 
-        public async Task OnGetAsync(string albumTitle, string dateReleased, string artistFName, string artistLname, string trackName)
+        public async Task OnGetAsync(string albumTitle, int yearReleased, string artistFName, string artistLname, string trackName)
         {
 			//Create a queryable list of durations
 			/*
@@ -40,10 +40,10 @@ namespace RazorPagesJazz.Pages.Albums
 				albums = albums.Where(a => a.Title.Contains(albumTitle));
 			}
 
-			//Filter by datereleased
-			if (!String.IsNullOrEmpty(dateReleased))
+			//Filter by yearreleased
+			if (yearReleased > 0)
 			{
-				albums = albums.Where(a => a.DateReleased.Equals(dateReleased));
+				albums = albums.Where(a => a.YearReleased.Equals(yearReleased));
 			}
 
 			//If the user queried on an artist's full name
@@ -57,7 +57,7 @@ namespace RazorPagesJazz.Pages.Albums
 					 select new Models.Albums {
 						 Title = a.Title,
 						 Duration = a.Duration,
-						 DateReleased = a.DateReleased,
+						 YearReleased = a.YearReleased,
 					 });
 				albums = query;
 			}
@@ -73,7 +73,7 @@ namespace RazorPagesJazz.Pages.Albums
 					 {
 						 Title = a.Title,
 						 Duration = a.Duration,
-						 DateReleased = a.DateReleased,
+						 YearReleased = a.YearReleased,
 					 });
 				albums = query;
 			}
@@ -88,7 +88,7 @@ namespace RazorPagesJazz.Pages.Albums
 					 {
 						 Title = a.Title,
 						 Duration = a.Duration,
-						 DateReleased = a.DateReleased,
+						 YearReleased = a.YearReleased,
 					 });
 				albums = query;
 			}
@@ -104,7 +104,7 @@ namespace RazorPagesJazz.Pages.Albums
 					 {
 						 Title = a.Title,
 						 Duration = a.Duration,
-						 DateReleased = a.DateReleased
+						 YearReleased = a.YearReleased
 					 });
 				albums = query;
 			}

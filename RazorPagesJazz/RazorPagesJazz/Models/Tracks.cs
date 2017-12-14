@@ -14,7 +14,7 @@ namespace RazorPagesJazz.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime? DateRecorded { get; set; }
+        public Int32? YearRecorded { get; set; }
         public int? Duration { get; set; }
 
         public ICollection<AlbumContainsTracks> AlbumContainsTracks { get; set; }

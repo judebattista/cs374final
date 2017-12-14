@@ -21,7 +21,7 @@ namespace RazorPagesJazz.Pages.Tracks
 
         public IList<Models.Tracks> Tracks { get;set; }
 
-        public async Task OnGetAsync(string albumTitle, string dateRecorded, string artistFName, string artistLname, string trackName)
+        public async Task OnGetAsync(string albumTitle, int yearRecorded, string artistFName, string artistLname, string trackName)
         {
 			//Get all the tracks in the DB. This is not efficient
 			var tracks = from t in _context.Tracks
@@ -31,10 +31,10 @@ namespace RazorPagesJazz.Pages.Tracks
 				tracks = tracks.Where(t => t.Name.Contains(trackName));
 			}
 
-			//Filter by datereleased
-			if (!String.IsNullOrEmpty(dateRecorded))
+			//Filter by yearrecorded
+			if (yearRecorded > 0)
 			{
-				tracks = tracks.Where(t => t.DateRecorded.Equals(dateRecorded));
+				tracks = tracks.Where(t => t.YearRecorded.Equals(yearRecorded));
 			}
 
 
@@ -50,7 +50,7 @@ namespace RazorPagesJazz.Pages.Tracks
 					 {
 						 Name = t.Name,
 						 Duration = t.Duration,
-						 DateRecorded = t.DateRecorded
+						 YearRecorded = t.YearRecorded
 					 });
 				tracks = query;
 			}
@@ -67,7 +67,7 @@ namespace RazorPagesJazz.Pages.Tracks
 					 {
 						 Name = t.Name,
 						 Duration = t.Duration,
-						 DateRecorded = t.DateRecorded
+						 YearRecorded = t.YearRecorded
 					 });
 				tracks = query;
 			}
@@ -83,7 +83,7 @@ namespace RazorPagesJazz.Pages.Tracks
 					 {
 						 Name = t.Name,
 						 Duration = t.Duration,
-						 DateRecorded = t.DateRecorded
+						 YearRecorded = t.YearRecorded
 					 });
 				tracks = query;
 			}
@@ -97,7 +97,7 @@ namespace RazorPagesJazz.Pages.Tracks
 					 {
 						 Name = t.Name,
 						 Duration = t.Duration,
-						 DateRecorded = t.DateRecorded
+						 YearRecorded = t.YearRecorded
 					 });
 				tracks = query;
 			}
