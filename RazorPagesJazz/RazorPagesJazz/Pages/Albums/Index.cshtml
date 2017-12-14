@@ -2,10 +2,10 @@
 @model RazorPagesJazz.Pages.Albums.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Search for Artists";
 }
 
-<h2>Index</h2>
+<h2>Search for Artists</h2>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -13,13 +13,6 @@
 
 
 <form>
-	@*Drop down query data
-		<p>
-			<select asp-for="AlbumDuration" asp-items="Model.Durations">
-				<option value="">All</option>
-			</select>
-		</p>
-	*@
 	<p>
 		Title: <input type="text" name="albumtitle" />
 	</p>
@@ -71,9 +64,7 @@
 			<td>
 				<a asp-page="./Tracks" asp-route-id="@item.Id">Tracks</a> |
 				<a asp-page="./Artists" asp-route-id="@item.Id">Artists</a> |
-				<a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-				<a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-				<a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+				<a asp-page="./Details" asp-route-id="@item.Id">Details</a>
 			</td>
         </tr>
 }
