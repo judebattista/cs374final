@@ -52,6 +52,9 @@ namespace RazorPagesJazz.Models
 
                 entity.Property(e => e.Duration).HasColumnName("duration");
 
+				entity.Property(e => e.DurationM).HasColumnName("duration");
+				entity.Property(e => e.DurationS).HasColumnName("duration");
+
                 entity.Property(e => e.Title)
                     .HasColumnName("title")
                     .HasMaxLength(255);
@@ -159,8 +162,10 @@ namespace RazorPagesJazz.Models
                     .HasColumnType("int");
 
                 entity.Property(e => e.Duration).HasColumnName("duration");
+				entity.Property(e => e.DurationM).HasColumnName("duration");
+				entity.Property(e => e.DurationS).HasColumnName("duration");
 
-                entity.Property(e => e.Name)
+				entity.Property(e => e.Name)
                     .HasColumnName("name")
                     .HasMaxLength(255);
             });

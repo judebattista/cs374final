@@ -34,13 +34,7 @@ namespace RazorPagesJazz.Pages.Artists
 				join f in _context.ArtistFeaturedOnAlbums on a.Id equals f.AlbumId
 				join r in _context.Artists on f.ArtistId equals r.Id
 				where r.Id == id
-				select new Models.Albums
-				{
-					Id = a.Id,
-					Title = a.Title,
-					Duration = a.Duration,
-					YearReleased = a.YearReleased
-				});
+				select a);
 
 			Albums = await albums.ToListAsync();
 

@@ -34,13 +34,7 @@ namespace RazorPagesJazz.Pages.Albums
 				join at in _context.AlbumContainsTracks on t.Id equals at.TrackId
 				join a in _context.Albums on at.AlbumId equals a.Id
 				where a.Id == id
-				select new Models.Tracks
-				{
-					Id = t.Id,
-					Name = t.Name,
-					Duration = t.Duration,
-					YearRecorded = t.YearRecorded
-				});
+				select t);
 
 			Tracks = await tracks.ToListAsync();
 

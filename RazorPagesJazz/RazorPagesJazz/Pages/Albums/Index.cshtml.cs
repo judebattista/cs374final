@@ -54,11 +54,8 @@ namespace RazorPagesJazz.Pages.Albums
 					 join f in _context.ArtistFeaturedOnAlbums on a.Id equals f.AlbumId
 					 join r in _context.Artists on f.ArtistId equals r.Id
 					 where r.Fname == artistFName && r.Lname == artistLname
-					 select new Models.Albums {
-						 Title = a.Title,
-						 Duration = a.Duration,
-						 YearReleased = a.YearReleased,
-					 });
+					 select a
+					 );
 				albums = query;
 			}
 			//What if they only used the first name?
@@ -69,12 +66,7 @@ namespace RazorPagesJazz.Pages.Albums
 					 join f in _context.ArtistFeaturedOnAlbums on a.Id equals f.AlbumId
 					 join r in _context.Artists on f.ArtistId equals r.Id
 					 where r.Fname == artistFName
-					 select new Models.Albums
-					 {
-						 Title = a.Title,
-						 Duration = a.Duration,
-						 YearReleased = a.YearReleased,
-					 });
+					 select a);
 				albums = query;
 			}
 			else if (!String.IsNullOrEmpty(artistLname))
@@ -84,12 +76,7 @@ namespace RazorPagesJazz.Pages.Albums
 					 join f in _context.ArtistFeaturedOnAlbums on a.Id equals f.AlbumId
 					 join r in _context.Artists on f.ArtistId equals r.Id
 					 where r.Lname == artistLname
-					 select new Models.Albums
-					 {
-						 Title = a.Title,
-						 Duration = a.Duration,
-						 YearReleased = a.YearReleased,
-					 });
+					 select a);
 				albums = query;
 			}
 
@@ -100,12 +87,7 @@ namespace RazorPagesJazz.Pages.Albums
 					 join c in _context.AlbumContainsTracks on a.Id equals c.AlbumId
 					 join t in _context.Tracks on c.TrackId equals t.Id
 					 where t.Name.Contains(trackName)
-					 select new Models.Albums
-					 {
-						 Title = a.Title,
-						 Duration = a.Duration,
-						 YearReleased = a.YearReleased
-					 });
+					 select a);
 				albums = query;
 			}
 

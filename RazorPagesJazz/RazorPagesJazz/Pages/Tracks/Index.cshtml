@@ -55,9 +55,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.YearRecorded)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
-            </td>
+			<td>
+				@Html.DisplayFor(modelItem => item.DurationM):@Html.DisplayFor(modelItem => item.DurationS)
+			</td>
 			<td>
 				<a asp-page="./Albums" asp-route-id="@item.Id">Albums</a> |
 				<a asp-page="./Artists" asp-route-id="@item.Id">Artists</a> |

@@ -44,11 +44,7 @@ namespace RazorPagesJazz.Pages.Artists
 					 join f in _context.ArtistFeaturedOnAlbums on r.Id equals f.ArtistId
 					 join a in _context.Albums on f.AlbumId equals a.Id
 					 where a.Title.Contains(albumTitle)
-					 select new Models.Artists
-					 {
-						 Fname = r.Fname,
-						 Lname = r.Lname
-					 });
+					 select r);
 				artists = query;
 			}
 
@@ -60,11 +56,7 @@ namespace RazorPagesJazz.Pages.Artists
 					 join p in _context.ArtistPerformsTracks on r.Id equals p.ArtistId
 					 join t in _context.Tracks on p.TrackId equals t.Id
 					 where t.Name.Contains(trackName)
-					 select new Models.Artists
-					 {
-						 Fname = r.Fname,
-						 Lname = r.Lname
-					 });
+					 select r);
 				artists = query;
 			}
 			Artists = await artists.ToListAsync();

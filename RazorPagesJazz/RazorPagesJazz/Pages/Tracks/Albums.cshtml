@@ -40,7 +40,7 @@
 				@Html.DisplayNameFor(model => model.Albums[0].Title)
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.Albums[0].Duration)
+				@Html.DisplayNameFor(model => model.Albums[0].Duration).
 			</th>
 			<th>
 				@Html.DisplayNameFor(model => model.Albums[0].YearReleased)
@@ -56,7 +56,7 @@
 				@Html.DisplayFor(modelItem => item.Title)
 			</td>
 			<td>
-				@Html.DisplayFor(modelItem => item.Duration)
+				@Html.DisplayFor(modelItem => item.DurationM):@Html.DisplayFor(modelItem => item.DurationS)
 			</td>
 			<td>
 				@Html.DisplayFor(modelItem => item.YearReleased)

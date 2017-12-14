@@ -34,12 +34,7 @@ namespace RazorPagesJazz.Pages.Tracks
 				join p in _context.ArtistPerformsTracks on r.Id equals p.ArtistId
 				join t in _context.Tracks on p.TrackId equals t.Id
 				where t.Id == id
-				select new Models.Artists
-				{
-					Id = r.Id,
-					Fname = r.Fname,
-					Lname = r.Fname,
-				});
+				select r);
 
 			Artists = await artists.ToListAsync();
 
